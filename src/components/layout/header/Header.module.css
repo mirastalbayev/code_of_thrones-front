@@ -1,0 +1,10 @@
+.header a {
+	margin: 0 10px;
+	transition: color 0.4s ease-in-out;
+	padding: 20px 0;
+}
+
+.header a:hover,
+.header .active {
+	color: #c353c3;
+}
