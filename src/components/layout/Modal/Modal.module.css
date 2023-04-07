@@ -34,6 +34,13 @@
     transition: color 0.3s ease-in-out;
 }
 
+.ModalContent form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
 .Modal-close:hover {
     color: #000;
 }
