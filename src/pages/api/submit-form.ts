@@ -5,7 +5,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === 'POST') {
         const { city, name, amount, phone, email } = req.body;
 
-        // Сохраняем данные в базу данных
         const { db } = await connectToDatabase();
         const collection = db.collection('formData');
         const result = await collection.insertOne({ city, name, amount, phone, email });
