@@ -5,8 +5,7 @@ import styles from './Header.module.css';
 const Header: FC = () => {
 	return (
 		<header className={styles.header}>
-			<Link href='/'>Invoices</Link>
-			<Link href='/invoice'>New Invoice</Link>
+			<div className={styles.logo}></div>
 		</header>
 	);
 };
