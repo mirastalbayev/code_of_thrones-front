@@ -7,10 +7,10 @@ import Invoices from '@/components/layout/Invoices/Invoices';
 import Modal from '@/components/layout/Modal/Modal';
 
 const Layout: FC<PropsWithChildren<IMeta>> = ({
-												  children,
-												  title,
-												  description,
-											  }) => {
+	children,
+	title,
+	description,
+}) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const toggleModal = () => {

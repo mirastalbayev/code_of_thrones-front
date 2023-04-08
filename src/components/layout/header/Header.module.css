@@ -1,15 +1,17 @@
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	width: 103px;
-	background-color: #373B53;
+	position: absolute;
+	width: 730px;
+	height: 55px;
+	left: 355px;
+	top: 77px;
+	display: flex;
+	justify-content: flex-end; /* добавлено */
 }
 
-.logo {
-	position: fixed;
-	height: 103px;
-	width: 103px;
+.btn {
+	width: 150px;
+	height: 48px;
 	background-color: #7c5dfa;
+	color: #f8f8fb;
+	border-radius: 15px;
 }
