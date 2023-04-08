@@ -88,11 +88,7 @@ const RegisterPage: NextPage = () => {
 								/>
 							</Grid>
 							<Grid item xs={12}>
-								<FormControl
-									sx={{ width: 396 }}
-									// Исправить размер sx 396
-									variant='outlined'
-								>
+								<FormControl variant='outlined' fullWidth required>
 									<InputLabel htmlFor='outlined-adornment-password'>
 										Пароль
 									</InputLabel>
@@ -112,8 +108,30 @@ const RegisterPage: NextPage = () => {
 											</InputAdornment>
 										}
 										label='Password'
-										fullWidth
-										required
+									/>
+								</FormControl>
+							</Grid>
+							<Grid item xs={12}>
+								<FormControl variant='outlined' fullWidth required>
+									<InputLabel htmlFor='outlined-adornment-password'>
+										Повторить пароль
+									</InputLabel>
+									<OutlinedInput
+										id='outlined-adornment-password'
+										type={showPassword ? 'text' : 'password'}
+										endAdornment={
+											<InputAdornment position='end'>
+												<IconButton
+													aria-label='toggle password visibility'
+													onClick={handleClickShowPassword}
+													onMouseDown={handleMouseDownPassword}
+													edge='end'
+												>
+													{showPassword ? <VisibilityOff /> : <Visibility />}
+												</IconButton>
+											</InputAdornment>
+										}
+										label='Confirm Password'
 									/>
 								</FormControl>
 							</Grid>

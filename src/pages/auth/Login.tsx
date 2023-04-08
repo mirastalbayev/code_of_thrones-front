@@ -78,11 +78,7 @@ const LoginPage: NextPage = () => {
 							autoFocus
 						/>
 						<Grid item xs={12}>
-							<FormControl
-								sx={{ width: 396 }}
-								// Исправить размер sx 396
-								variant='outlined'
-							>
+							<FormControl variant='outlined' fullWidth required>
 								<InputLabel htmlFor='outlined-adornment-password'>
 									Пароль
 								</InputLabel>
@@ -102,8 +98,6 @@ const LoginPage: NextPage = () => {
 										</InputAdornment>
 									}
 									label='Password'
-									fullWidth
-									required
 								/>
 							</FormControl>
 						</Grid>
