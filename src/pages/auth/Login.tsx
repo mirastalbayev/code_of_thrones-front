@@ -1,11 +1,11 @@
 import { NextPage } from 'next';
+import Link from 'next/link';
 import Image from 'next/image';
 import * as React from 'react';
 import {
 	Box,
 	Grid,
 	Checkbox,
-	Link,
 	Button,
 	CssBaseline,
 	TextField,
@@ -114,15 +114,11 @@ const LoginPage: NextPage = () => {
 							Авторизация
 						</Button>
 						<Grid container>
-							<Grid item xs>
-								<Link href='#' variant='body2'>
-									Забыли пароль?
-								</Link>
+							<Grid item xs sx={{ fontSize: '1rem' }}>
+								<Link href='#'>Забыли пароль?</Link>
 							</Grid>
-							<Grid item>
-								<Link href='#' variant='body2'>
-									{'У вас нет аккаунта?'}
-								</Link>
+							<Grid item sx={{ fontSize: '1rem' }}>
+								<Link href='./register'>{'У вас нет аккаунта?'}</Link>
 							</Grid>
 						</Grid>
 					</Box>

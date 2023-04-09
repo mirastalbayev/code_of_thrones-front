@@ -20,8 +20,8 @@ const Layout: FC<PropsWithChildren<IMeta>> = ({
 	return (
 		<Meta title={title} description={description}>
 			<div>
-				<Sidebar toggleModal={toggleModal} />
-				<Header />
+				<Sidebar />
+				<Header toggleModal={toggleModal} />
 				<Invoices />
 			</div>
 			{isModalOpen && <Modal toggleModal={toggleModal} />}

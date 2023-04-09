@@ -1,10 +1,10 @@
 import { NextPage } from 'next';
+import Link from 'next/link';
 import Image from 'next/image';
 import * as React from 'react';
 import {
 	Box,
 	Grid,
-	Link,
 	Button,
 	CssBaseline,
 	TextField,
@@ -145,10 +145,8 @@ const RegisterPage: NextPage = () => {
 							Регистрация
 						</Button>
 						<Grid container justifyContent='flex-end'>
-							<Grid item>
-								<Link href='#' variant='body2'>
-									У вас есть аккаунт?
-								</Link>
+							<Grid item sx={{ fontSize: '1rem' }}>
+								<Link href='./login'>У вас есть аккаунт?</Link>
 							</Grid>
 						</Grid>
 					</Box>
