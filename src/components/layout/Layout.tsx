@@ -22,7 +22,8 @@ const Layout: FC<PropsWithChildren<IMeta>> = ({
 			<div>
 				<Sidebar />
 				<Header toggleModal={toggleModal} />
-				<Invoices />
+				{children}
+				{/* <Invoices /> */}
 			</div>
 			{isModalOpen && <Modal toggleModal={toggleModal} />}
 		</Meta>
