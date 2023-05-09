@@ -52,7 +52,7 @@ const Header: FC = () => {
 				// margin: '77px auto 0',
 			}}
 		>
-			<h1>Invoices</h1>
+			<h1>Room booking</h1>
 			<MyAccordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
@@ -88,7 +88,7 @@ const Header: FC = () => {
 				startIcon={<AddCircleRoundedIcon style={{ fontSize: 35 }} />}
 				onClick={handleNewInvoiceClick}
 			>
-				New Invoice
+				New Cabinet
 			</NewInvoiceBtn>
 			{isModalVisible && <Modal onClose={handleModalClose} />}
 		</div>

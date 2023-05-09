@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { FC, PropsWithChildren } from 'react';
 import { IMeta } from './meta.interface';
 
-const getTitle = (title: string) => `${title} | Invoice App`;
+const getTitle = (title: string) => `${title} | Code of Thrones`;
 
 const Meta: FC<PropsWithChildren<IMeta>> = ({
 	title,

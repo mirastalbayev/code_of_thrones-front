@@ -32,6 +32,7 @@ function Sidebar() {
 				width: 100,
 				height: '100%',
 				background: '#373B53',
+				borderTopLeftRadius: '20px',
 				borderTopRightRadius: '20px',
 				borderBottomRightRadius: '20px',
 			}}
@@ -66,6 +67,7 @@ function Sidebar() {
 					onClose={handleCloseUserMenu}
 				>
 					<MenuItem onClick={handleCloseUserMenu}>
+						<Typography textAlign='center'>Logout</Typography>
 						<Typography textAlign='center'>Logout</Typography>
 					</MenuItem>
 				</Menu>
