@@ -20,11 +20,17 @@ import {
 } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const theme = createTheme();
+const router = useRouter();
+const [error, setError] = useState('');
+const [email, setEmail] = useState('');
+const [password, setPassword] = useState('');
 
 const LoginPage: NextPage = () => {
-	const [showPassword, setShowPassword] = React.useState(false);
+	const [showPassword, setShowPassword] = useState(false);
 
 	const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -34,13 +40,25 @@ const LoginPage: NextPage = () => {
 		event.preventDefault();
 	};
 
-	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const data = new FormData(event.currentTarget);
-		console.log({
-			email: data.get('email'),
-			password: data.get('password'),
-		});
+		try {
+			const response = await fetch('/api/login', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ email, password }),
+			});
+			const data = await response.json();
+			if (response.ok) {
+				sessionStorage.setItem('token', data.token);
+				setError('');
+				router.push('/api');
+			} else {
+				throw new Error(data.message);
+			}
+		} catch (error: any) {
+			setError(error.message);
+		}
 	};
 
 	return (
@@ -56,9 +74,8 @@ const LoginPage: NextPage = () => {
 					}}
 				>
 					<Box sx={{ display: 'flex', alignItems: 'center' }}>
-						<Image src='/Logo.svg' alt='' width={50} height={52} />
 						<Typography component='h1' variant='h5' sx={{ ml: 2 }}>
-							INVOICE APP
+							Sign In
 						</Typography>
 					</Box>
 					<Box
