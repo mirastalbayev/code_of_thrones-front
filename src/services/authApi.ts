@@ -26,9 +26,11 @@ export const login = async (
 	request: ILoginRequest
 ): Promise<ILoginResponse> => {
 	const { data } = await axios.post(`${BASE_API}/signin`, request);
+	const { userID } = data;
 	const { jwtToken } = data; // Получение токена из ответа
 	// Сохранение токена в sessionStorage
 	sessionStorage.setItem('token', jwtToken);
+	console.log('id: ', userID);
 	console.log('token: ', jwtToken);
 	return data;
 };
