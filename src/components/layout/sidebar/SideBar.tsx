@@ -74,8 +74,13 @@ function Sidebar() {
 					onClose={handleCloseUserMenu}
 				>
 					<MenuItem onClick={handleCloseUserMenu}>
-						<Typography textAlign='center'>Logout</Typography>
-						<Typography textAlign='center'>Logout</Typography>
+						<Typography textAlign='center'>Profile</Typography>
+					</MenuItem>
+					<MenuItem onClick={handleCloseUserMenu}>
+						<Typography textAlign='center'>Reservation</Typography>
+					</MenuItem>
+					<MenuItem onClick={handleCloseUserMenu}>
+						<Typography textAlign='center'>Exit</Typography>
 					</MenuItem>
 				</Menu>
 			</Box>
