@@ -8,6 +8,7 @@ import {
 	MenuItem,
 } from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
+import Image from 'next/image';
 
 function Sidebar() {
 	const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
@@ -31,20 +32,26 @@ function Sidebar() {
 				justifyContent: 'space-between',
 				width: 100,
 				height: '100%',
-				background: '#373B53',
-				borderTopLeftRadius: '20px',
-				borderTopRightRadius: '20px',
-				borderBottomRightRadius: '20px',
+				background: '#264893',
+				borderTopLeftRadius: '16px',
+				borderTopRightRadius: '16px',
+				borderBottomRightRadius: '16px',
 			}}
 		>
-			<AdbIcon />
+			<Image
+				priority
+				src='/Logo.svg'
+				alt=''
+				width={100}
+				height={101}
+			/>
 			<Box
 				sx={{
 					display: 'flex',
 					justifyContent: 'center',
 					mb: '24px',
 					pt: '24px',
-					borderTop: '1px solid #979797',
+					borderTop: '1px solid #F16300',
 				}}
 			>
 				<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

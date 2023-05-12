@@ -13,9 +13,6 @@ body {
 	font-size: 20px;
 	background-color: #f8f8fb;
 }
-main {
-	height: 100vh;
-}
 
 .center {
 	display: flex;
