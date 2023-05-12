@@ -1,37 +1,35 @@
 {
-  "name": "invoice_app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@hookform/resolvers": "^3.0.1",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.11.15",
-    "@mui/x-date-pickers": "^6.4.0",
-    "@types/node": "18.15.11",
-    "@types/react": "18.0.32",
-    "@types/react-dom": "18.0.11",
-    "axios": "^1.4.0",
-    "dayjs": "^1.11.7",
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hook-form": "^7.43.9",
-    "styled-components": "^6.0.0-rc.1",
-    "typescript": "5.0.3",
-    "yup": "^1.0.2",
-    "zod": "^3.21.4"
-  },
-  "devDependencies": {
-    "prettier": "2.8.7"
-  }
+	"name": "invoice_app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.11.0",
+		"@emotion/styled": "^11.11.0",
+		"@fontsource/roboto": "^4.5.8",
+		"@mui/icons-material": "^5.11.16",
+		"@mui/material": "^5.13.0",
+		"@types/node": "20.1.2",
+		"@types/react": "18.2.6",
+		"@types/react-dom": "18.2.4",
+		"axios": "^1.4.0",
+		"eslint": "8.40.0",
+		"eslint-config-next": "13.4.1",
+		"formik": "^2.2.9",
+		"next": "13.4.1",
+		"react": "18.2.0",
+		"react-cookies": "^0.1.1",
+		"react-dom": "18.2.0",
+		"typescript": "5.0.4",
+		"yup": "^1.1.1"
+	},
+	"devDependencies": {
+		"@types/react-cookies": "^0.1.0",
+		"prettier": "2.8.7"
+	}
 }
