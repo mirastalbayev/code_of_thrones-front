@@ -1,10 +1,12 @@
+import * as React from 'react';
 import Link from 'next/link';
 import { FC } from 'react';
+import AddNewCabinet from "../addNewCabinet/AddNewCabinet";
 import { useState } from 'react';
-import Modal from '../Modal/Modal';
 import {
 	styled,
 	Button,
+	Box,
 	Accordion,
 	AccordionSummary,
 	AccordionDetails,
@@ -24,7 +26,7 @@ const Header: FC = () => {
 		overflow: 'auto',
 	});
 
-	const NewInvoiceBtn = styled(Button)({
+	const NewCabinetBtn = styled(Button)({
 		backgroundColor: '#7c5efb',
 		borderRadius: '24px',
 		'&:hover': {
@@ -45,14 +47,21 @@ const Header: FC = () => {
 	return (
 		<div
 			style={{
+				// position: 'fixed',
+				// top: 0,
+				// left: 0,
+				// right: 0,
 				display: 'flex',
 				justifyContent: 'space-around',
 				width: 730,
-				margin: '0 auto',
-				// margin: '77px auto 0',
+				height: '80px',
+				margin: '50px auto 0',
 			}}
 		>
-			<h1>Room booking</h1>
+			<Box sx={{ display: 'flex', flexDirection: 'column' }}>
+				<h1>Room booking</h1>
+				<Typography variant="subtitle2">There are 7 cabinets in total</Typography>
+			</Box>
 			<MyAccordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
@@ -82,15 +91,15 @@ const Header: FC = () => {
 					</FormGroup>
 				</AccordionDetails>
 			</MyAccordion>
-			<NewInvoiceBtn
+			<NewCabinetBtn
 				sx={{ height: '48px' }}
 				variant='contained'
 				startIcon={<AddCircleRoundedIcon style={{ fontSize: 35 }} />}
 				onClick={handleNewInvoiceClick}
 			>
 				New Cabinet
-			</NewInvoiceBtn>
-			{isModalVisible && <Modal onClose={handleModalClose} />}
+			</NewCabinetBtn>
+			{isModalVisible && <AddNewCabinet onClose={handleModalClose} />}
 		</div>
 	);
 };
