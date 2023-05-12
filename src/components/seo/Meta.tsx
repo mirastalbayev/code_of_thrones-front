@@ -22,6 +22,7 @@ const Meta: FC<PropsWithChildren<IMeta>> = ({
 				) : (
 					<meta name='robots' content='noindex, nofollow' />
 				)}
+				<link rel='icon' href='/Sait.png' sizes='16x16' />
 			</Head>
 			{children}
 		</>

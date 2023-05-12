@@ -1,11 +1,10 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { FC } from 'react';
-import AddNewCabinet from "../addNewCabinet/AddNewCabinet";
-import { useState } from 'react';
+// import { useState } from 'react';
+import AddNewRoom from "../addNewRoom/AddNewRoom";
 import {
 	styled,
-	Button,
 	Box,
 	Accordion,
 	AccordionSummary,
@@ -16,7 +15,6 @@ import {
 	Checkbox,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 
 const Header: FC = () => {
 	const MyAccordion = styled(Accordion)({
@@ -25,24 +23,6 @@ const Header: FC = () => {
 		maxHeight: '200px',
 		overflow: 'auto',
 	});
-
-	const NewCabinetBtn = styled(Button)({
-		backgroundColor: '#7c5efb',
-		borderRadius: '24px',
-		'&:hover': {
-			backgroundColor: 'rgba(124, 94, 251, 1)',
-		},
-	});
-
-	const [isModalVisible, setIsModalVisible] = useState(false);
-
-	const handleNewInvoiceClick = () => {
-		setIsModalVisible(true);
-	};
-
-	const handleModalClose = () => {
-		setIsModalVisible(false);
-	};
 
 	return (
 		<div
@@ -91,15 +71,7 @@ const Header: FC = () => {
 					</FormGroup>
 				</AccordionDetails>
 			</MyAccordion>
-			<NewCabinetBtn
-				sx={{ height: '48px' }}
-				variant='contained'
-				startIcon={<AddCircleRoundedIcon style={{ fontSize: 35 }} />}
-				onClick={handleNewInvoiceClick}
-			>
-				New Cabinet
-			</NewCabinetBtn>
-			{isModalVisible && <AddNewCabinet onClose={handleModalClose} />}
+			<AddNewRoom />
 		</div>
 	);
 };

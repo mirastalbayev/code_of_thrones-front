@@ -4,7 +4,7 @@ import Meta from '../seo/Meta';
 import { IMeta } from '../seo/meta.interface';
 import Sidebar from './sidebar/SideBar';
 import Invoices from '@/components/layout/Invoices/Invoices';
-import Modal from '@/components/layout/addNewCabinet/AddNewCabinet';
+import Modal from '@/components/layout/addNewRoom/AddNewRoom';
 import {
 	Box,
 	Grid
@@ -15,11 +15,11 @@ const Layout: FC<PropsWithChildren<IMeta>> = ({
 	title,
 	description,
 }) => {
-	const [isModalOpen, setIsModalOpen] = useState(false);
+	// const [isModalOpen, setIsModalOpen] = useState(false);
 
-	const toggleModal = () => {
-		setIsModalOpen(!isModalOpen);
-	};
+	// const toggleModal = () => {
+	// 	setIsModalOpen(!isModalOpen);
+	// };
 
 	return (
 		<Meta title={title} description={description}>
@@ -30,11 +30,11 @@ const Layout: FC<PropsWithChildren<IMeta>> = ({
 						</Grid>
 						<Grid container xs={11}>
 							<Grid xs={12}>
-								<Header toggleModal={toggleModal} />
+								<Header />
 							</Grid>
 							<Grid xs={12}>
 								{children}
-								{isModalOpen && <Modal toggleModal={toggleModal} />}
+								{/* {isModalOpen && <Modal toggleModal={toggleModal} />} */}
 							</Grid>
 						</Grid>
 				</Grid>
